@@ -39,7 +39,8 @@ public class ConsoleView {
     System.out.println("[Mano]:");
     int i = 0;
     for (ICard card : player.getHand()) {
-      System.out.println(i + ") " + card);
+      //System.out.println(i + ") " + card);
+      System.out.println(i + ") " + card.getColor().getName() + card.getSymbol().getName());
       i++;
     }
   }

@@ -2,6 +2,11 @@ package model.card.type;
 
 import java.util.Arrays;
 
+import controller.ConsoleController;
+import model.IGameLogic;
+import model.player.IPlayerListBuilder;
+import view.ConsoleView;
+
 /**
  * Symbols (Numeric and special) for UNO Cards.
  * @author eriveros
@@ -50,4 +55,7 @@ public enum Symbol {
   public static Symbol[] getNumeric() {
     return Arrays.copyOfRange(Symbol.values(),0,10);
   }
+  
+  
+  
 }

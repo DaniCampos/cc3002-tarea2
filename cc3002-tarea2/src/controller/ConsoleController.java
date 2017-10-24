@@ -31,6 +31,8 @@ public class ConsoleController implements IController {
     this.in = new Scanner(System.in);
     showMessage("¡Bienvenido a JavaUNO!");
     game.getCurrentPlayedCard().executeAction(game, this);
+    //ICard a = game.getCurrentPlayedCard();
+    //showMessage(a.getSymbol().getName());
   }
 
   @Override

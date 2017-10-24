@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.1" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <interface id="1" language="java" name="model.player.IPlayerManager" project="cc3002-tarea2" 
+    file="/cc3002-tarea2/src/model/player/IPlayerManager.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="152" width="193" x="260" y="-37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="2" language="java" name="model.player.IPlayerListBuilder" project="cc3002-tarea2" 
+    file="/cc3002-tarea2/src/model/player/IPlayerListBuilder.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="98" width="215" x="493" y="-37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="3" language="java" name="model.IGameLogic" project="cc3002-tarea2" 
+    file="/cc3002-tarea2/src/model/IGameLogic.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="314" width="264" x="2198" y="617"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="4" language="java" name="model.card.deck.IDeckStrategy" project="cc3002-tarea2" 
+    file="/cc3002-tarea2/src/model/card/deck/IDeckStrategy.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="80" width="148" x="748" y="-37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="5" language="java" name="view.ConsoleView" project="cc3002-tarea2" 
+    file="/cc3002-tarea2/src/view/ConsoleView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="152" width="188" x="1989" y="425"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="6" language="java" name="model.card.type.Color" project="cc3002-tarea2" 
+    file="/cc3002-tarea2/src/model/card/type/Color.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="224" width="135" x="936" y="-37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <enumeration id="7" language="java" name="model.card.type.Symbol" project="cc3002-tarea2" 
+    file="/cc3002-tarea2/src/model/card/type/Symbol.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="422" width="187" x="1111" y="-37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <enumeration id="8" language="java" name="model.player.Direction" project="cc3002-tarea2" 
+    file="/cc3002-tarea2/src/model/player/Direction.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="188" width="212" x="1338" y="-37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <interface id="9" language="java" name="model.player.type.IPlayer" project="cc3002-tarea2" 
+    file="/cc3002-tarea2/src/model/player/type/IPlayer.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="278" width="269" x="1590" y="-37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="10" language="java" name="model.card.type.ICard" project="cc3002-tarea2" 
+    file="/cc3002-tarea2/src/model/card/type/ICard.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="170" width="259" x="1899" y="-37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="11" language="java" name="Main" project="cc3002-tarea2" file="/cc3002-tarea2/src/Main.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="98" width="124" x="2506" y="-37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="12" language="java" name="controller.IController" project="cc3002-tarea2" 
+    file="/cc3002-tarea2/src/controller/IController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="152" width="209" x="2238" y="425"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="13" language="java" name="model.card.ICardPilesManager" project="cc3002-tarea2" 
+    file="/cc3002-tarea2/src/model/card/ICardPilesManager.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="188" width="280" x="2670" y="-37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="14" language="java" name="model.card.ICardPile" project="cc3002-tarea2" 
+    file="/cc3002-tarea2/src/model/card/ICardPile.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="188" width="167" x="2990" y="-37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="15" language="java" name="controller.ConsoleController" project="cc3002-tarea2" 
+    file="/cc3002-tarea2/src/controller/ConsoleController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="188" width="268" x="2198" y="-37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="16">    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="17" name="view"/>      
+      <multiplicity id="18" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="19">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="12"/>  
+  </realization>  
+  <association id="20">    
+    <bendpoint x="2207" y="425"/>    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="21" name="game"/>      
+      <multiplicity id="22" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="23">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="24" name="game"/>      
+      <multiplicity id="25" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

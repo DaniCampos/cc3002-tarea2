@@ -4,7 +4,8 @@ import model.card.type.ICard;
 
 
 public interface ICardPile {
-
+  
+  
   /**
    * Returns the size of the card pile.
    * @return card pile's size.
@@ -46,5 +47,5 @@ public interface ICardPile {
    * @param otherPile the other pile of cards.
    */
   void pushCards(ICardPile otherPile);
-
+  
 }
