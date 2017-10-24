@@ -13,7 +13,7 @@ public class InvertCard extends AbstractCard {
   @Override
   public void executeAction(IGameLogic game, IController ctrl) {
      //game.playCard(this, ctrl);
-     ctrl.showMessage("Se jugó" + this.getColor().toString() + " " + this.getSymbol().toString());
+     ctrl.showMessage("Se jugó " + this.getColor().toString() + " " + this.getSymbol().toString());
      game.invertDirection();
   }
 }

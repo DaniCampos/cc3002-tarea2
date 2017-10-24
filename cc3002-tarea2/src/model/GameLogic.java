@@ -63,6 +63,10 @@ public class GameLogic implements IGameLogic {
     if(!isDrawWellEmpty()) {
       //ctrl.playTurn();
       this.drawCardsFromWell(getCurrentPlayer(), ctrl);
+      playerManager.startTurn();
+      //this.skipPlayer();
+      
+      
     }
 
     this.autoShoutUNO(ctrl);
@@ -97,29 +101,31 @@ public class GameLogic implements IGameLogic {
     
     player.addToHand(drawWell);
     this.resetDrawWell();
-    ctrl.showMessage("Jugador robo cartas"); 
-    
+    ctrl.showMessage("Jugador " + player.toString() + " robo cartas");
   } 
 
   @Override
   public void invertDirection() {
+    
     this.playerManager.invertDirection();  
   }
 
   @Override
   public boolean playCard(ICard playedCard, IController ctrl) {
     
-    
     boolean playable = playedCard.isPlayableOver(this.cardsManager.getCurrentPlayedCard());
     if(playable) {
       playedCard.executeAction(this, ctrl);
       this.cardsManager.discard(playedCard);
+      this.getCurrentPlayer().removeCardFromHand(playedCard);
       return true;
     }
     else {
-      ICard nullCard = new NullCard();
-      nullCard.executeAction(this, ctrl);
-      return false;
+      //ICard nullCard = new NullCard();
+      //nullCard.executeAction(this, ctrl);
+      //return false;
+      ctrl.showMessage(this.getCurrentPlayer().toString() + " no pudo jugar " + playedCard.toString());
+      return true;
     }
     
   }

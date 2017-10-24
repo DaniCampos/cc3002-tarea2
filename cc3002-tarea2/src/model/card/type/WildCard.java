@@ -11,6 +11,12 @@ public class WildCard extends AbstractCard {
   }
   
   @Override
+  public String toString() {
+    
+    return this.getSymbol().toString(); 
+  }
+  
+  @Override
   public boolean isFirstPlayable() {
     return false;
   }
@@ -18,8 +24,10 @@ public class WildCard extends AbstractCard {
   @Override
   public void executeAction(IGameLogic game, IController ctrl) {
      //game.playCard(this, ctrl);
-     ctrl.showMessage("Se jugó" + this.getColor().toString() + " " + this.getSymbol().toString());
-     game.getCurrentPlayer().selectColor(game, ctrl);
+     ctrl.showMessage("Se jugó" + " "+this.getColor().toString() + " " + this.getSymbol().toString());
+     
+     this.setColor(game.getCurrentPlayer().selectColor(game, ctrl));
+     ctrl.showMessage("Color elegido " + this.getColor().toString());
      //ctrl.askForColor();  
   }
 }

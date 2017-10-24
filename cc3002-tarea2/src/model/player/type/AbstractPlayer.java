@@ -12,13 +12,20 @@ public abstract class AbstractPlayer implements IPlayer {
   
   protected ArrayList<ICard> mano;
   protected boolean shoutStatus;
+  private String name;
   
-  public AbstractPlayer() {
+  public AbstractPlayer(String name) {
     
     this.mano = new ArrayList<ICard>();
     this.shoutStatus = false;
-    
+    this.name = name;
   }
+  
+  @Override
+  public String toString() {
+    return name;
+  }
+  
 
   @Override
   public void addToHand(ArrayList<ICard> hand) {
@@ -35,7 +42,16 @@ public abstract class AbstractPlayer implements IPlayer {
   @Override //puede ser una carta no válida
   public ICard getCardToPlay(IGameLogic game, IController ctrl) {
     int num = ctrl.AskForCardFromHand(this);
-    return this.getCardFromHand(num);
+    if(num == this.getHandSize()){
+      game.drawOneCard(this);
+      ICard cartaRobada = this.getCardFromHand(num);
+      ctrl.showMessage(this.toString() + " robo " + cartaRobada.toString());
+      return cartaRobada;
+    }
+    else {
+      return this.getCardFromHand(num);
+    }
+    
     /*ICard cartaDesc = game.getCurrentPlayedCard();
     for(int i = 0; i < mano.size(); ++i) {
       ICard carta = mano.get(i);

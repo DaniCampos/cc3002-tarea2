@@ -11,6 +11,12 @@ public class WildDrawCard extends AbstractCard {
   }
   
   @Override
+  public String toString() {
+    
+    return this.getSymbol().toString(); 
+  }
+  
+  @Override
   public boolean isFirstPlayable() {
     return false;
   }
@@ -20,6 +26,8 @@ public class WildDrawCard extends AbstractCard {
      //game.playCard(this, ctrl);
      ctrl.showMessage("Se jugó" + this.getColor().toString() + " " + this.getSymbol().toString());
      game.addToDrawWell(4); 
-     game.getCurrentPlayer().selectColor(game, ctrl);
+     
+     this.setColor(game.getCurrentPlayer().selectColor(game, ctrl));
+     ctrl.showMessage("Color elegido " + this.getColor().toString());
   }
 }

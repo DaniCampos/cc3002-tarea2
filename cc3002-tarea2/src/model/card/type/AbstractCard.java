@@ -3,11 +3,16 @@ package model.card.type;
 import controller.IController;
 import model.IGameLogic;
 
-public class AbstractCard implements ICard{
+public abstract class AbstractCard implements ICard{
   
   protected Color color;
   protected Symbol symbol;
   
+  @Override
+  public String toString() {
+    
+    return this.getColor().toString() + " " + this.getSymbol().toString(); 
+  }
   
   
 
@@ -42,7 +47,7 @@ public class AbstractCard implements ICard{
   @Override
   public void executeAction(IGameLogic game, IController ctrl) {
      //game.playCard(this, ctrl);
-     ctrl.showMessage("Se jugó" + this.getColor().toString() + " " + this.getSymbol().toString());
+     ctrl.showMessage("Se jugó" + " " + this.getColor().toString() + " " + this.getSymbol().toString());
     
   }
 

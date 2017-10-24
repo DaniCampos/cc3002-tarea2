@@ -40,6 +40,7 @@ public class PlayerManager implements IPlayerManager {
     else {
       this.direction = Direction.COUNTERCLOCKWISE;
     }
+    this.nextPlayerIndex = this.currentPlayerIndex + this.direction.value;
   }
 
   @Override
