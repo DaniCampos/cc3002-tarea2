@@ -10,12 +10,23 @@ import model.card.type.NullCard;
 import model.player.*;
 import model.player.type.IPlayer;
 
+/**
+ * Class that implements the constructor and methods of the IGameLogic interface
+ * 
+ * @author Daniela Campos
+ */
 public class GameLogic implements IGameLogic {
   
   private ICardPilesManager cardsManager;
   private IPlayerManager playerManager;
   private ArrayList<ICard> drawWell;
   
+  /**
+   * Constructor of an object of the GameLogic Class
+   * 
+   * @param deckStrategy deck creator
+   * @param playerListBuilder player list creator
+   */
   public GameLogic(IDeckStrategy deckStrategy, IPlayerListBuilder playerListBuilder) {
     
     cardsManager = new CardPilesManager(deckStrategy);
@@ -23,7 +34,6 @@ public class GameLogic implements IGameLogic {
     drawWell = new ArrayList<ICard>();
     
     for(IPlayer player : playerManager.getPlayers()) {
-      
       ArrayList<ICard> mano = this.cardsManager.drawCards(7);
       player.addToHand(mano);
     }
@@ -31,6 +41,7 @@ public class GameLogic implements IGameLogic {
   }
   @Override
   public boolean hasEnded() {
+    
     for(IPlayer player : playerManager.getPlayers()) {
       if(player.hasWon()) return true;
     }
@@ -39,6 +50,7 @@ public class GameLogic implements IGameLogic {
 
   @Override
   public IPlayer getCurrentPlayer() {
+    
     return playerManager.getCurrentPlayer();
   }
 
@@ -54,23 +66,17 @@ public class GameLogic implements IGameLogic {
     if(getCurrentPlayer().hasSaidUNO()) {
       ctrl.showMessage("UNO!");
     }
-    
   }
 
   @Override
   public void startTurn(IController ctrl) {
+    
     playerManager.startTurn();
     if(!isDrawWellEmpty()) {
-      //ctrl.playTurn();
       this.drawCardsFromWell(getCurrentPlayer(), ctrl);
       playerManager.startTurn();
-      //this.skipPlayer();
-      
-      
     }
-
     this.autoShoutUNO(ctrl);
-    
   }
 
   @Override
@@ -81,6 +87,7 @@ public class GameLogic implements IGameLogic {
 
   @Override
   public void addToDrawWell(int number) {
+    
     drawWell.addAll(this.cardsManager.drawCards(number));
   }
 
@@ -126,12 +133,12 @@ public class GameLogic implements IGameLogic {
       //return false;
       ctrl.showMessage(this.getCurrentPlayer().toString() + " no pudo jugar " + playedCard.toString());
       return true;
-    }
-    
+    }   
   }
 
   @Override
   public ICard drawOneCard(IPlayer player) {
+    
     ArrayList<ICard> agregar = new ArrayList<ICard>();
     ICard drawedCard = this.cardsManager.drawCard();
     agregar.add(drawedCard);
@@ -145,7 +152,5 @@ public class GameLogic implements IGameLogic {
     if(this.getCurrentPlayer().hasWon()) {
       ctrl.showMessage("Jugador actual gano");
     }
-    
   }
-
 }

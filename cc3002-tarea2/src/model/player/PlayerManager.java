@@ -4,6 +4,11 @@ import java.util.ArrayList;
 
 import model.player.type.IPlayer;
 
+/**
+ * Class that implements the constructor and methods of the IPlayerManager interface.
+ * 
+ * @author Daniela Campos
+ */
 public class PlayerManager implements IPlayerManager {
   
   private int currentPlayerIndex;
@@ -11,6 +16,11 @@ public class PlayerManager implements IPlayerManager {
   private int nextPlayerIndex;
   private Direction direction;
   
+  /**
+   * Constructor of an object of the PlayerManager Class
+   * 
+   * @param color color of the card
+   */
   public PlayerManager(IPlayerListBuilder players) {
     
     playerList = players.buildPlayerList();
@@ -52,9 +62,7 @@ public class PlayerManager implements IPlayerManager {
     }
     else {
       this.nextPlayerIndex = (this.nextPlayerIndex + direction.getValue())%(playerList.size());
-    }
-    
-    
+    }   
   }
 
   @Override

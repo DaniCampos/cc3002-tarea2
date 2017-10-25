@@ -7,9 +7,14 @@ import model.player.*;
 import model.player.type.*;
 import view.ConsoleView;
 /*Null adapte pila factory para deck y hand*/
+//implementar string builder
+//deckstrategy builder strategy 
+//player list builder 
+//template
+
 //error +4
 //se jugo none wild draw four
-// se jugo none wild
+//Stack tiene size()
 
 /**
  * Main class of UNO Game

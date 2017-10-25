@@ -1,25 +1,38 @@
 package model.player.type;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import controller.IController;
 import model.IGameLogic;
 import model.card.type.Color;
 import model.card.type.ICard;
+import model.card.type.NullCard;
 
+/**
+ * Class that implements the constructor associated to the VirtualPlayer
+ * 
+ * @author Daniela Campos
+ */
 public class VirtualPlayer extends AbstractPlayer {
   
+  /**
+   * Constructor of an object of the VirtualPlayer Class
+   * 
+   * @param name name of the player
+   */
   public VirtualPlayer(String name) {
     super(name);
   }
   
-  @Override //puede ser una carta no válida
+  @Override
   public ICard getCardToPlay(IGameLogic game, IController ctrl) {
     if(this.needsToDrawCard(game.getCurrentPlayedCard())) {
       game.drawOneCard(this);
       ICard cartaRobada = this.getCardFromHand(this.getHandSize() - 1);
       ctrl.showMessage(this.toString() + " robo " + cartaRobada.toString());
       return cartaRobada;
+      
     }
     else {
       ArrayList<ICard> cartasValidas = new ArrayList<ICard>();
@@ -39,8 +52,10 @@ public class VirtualPlayer extends AbstractPlayer {
   @Override
   public Color selectColor(IGameLogic game, IController ctrl) {
     
-    int randomNum = 2 + (int)(Math.random() * 5);
-    return Color.getColors()[randomNum-1];
+    Random randomNum = new Random();
+    int rN = randomNum.nextInt(4);
+    
+    return Color.getColors()[rN];
     
   }
 }

@@ -6,11 +6,21 @@ import model.card.deck.*;
 import model.card.type.ICard;
 import model.player.type.IPlayer;
 
+/**
+ * Class that implements the constructor and methods of the ICardPilesManager interface
+ * 
+ * @author Daniela Campos
+ */
 public class CardPilesManager implements ICardPilesManager {
   
   private ICardPile pilaDesc;
   private ICardPile mazo;
   
+  /**
+   * Constructor of an object of the CardPilesManager Class
+   * 
+   * @param deckStrategy deck creator
+   */
   public CardPilesManager(IDeckStrategy deckStrategy) {
     
     this.pilaDesc = new CardPile();
@@ -23,7 +33,6 @@ public class CardPilesManager implements ICardPilesManager {
       primera = this.mazo.popCard();
     }
     this.pilaDesc.pushCard(primera);
-    
   }
 
   @Override
@@ -38,16 +47,19 @@ public class CardPilesManager implements ICardPilesManager {
 
   @Override
   public ICard drawCard() {
+    
     return mazo.popCard();
   }
 
   @Override
   public int getDrawableCardsNumber() {
+    
     return pilaDesc.getSize() + mazo.getSize() - 1;
   }
 
   @Override
   public ArrayList<ICard> drawCards(int cardsNumber) {
+    
     ArrayList<ICard> list = new ArrayList<ICard>();
     while(cardsNumber != 0) {
       list.add(mazo.popCard());
@@ -58,17 +70,19 @@ public class CardPilesManager implements ICardPilesManager {
  
   @Override
   public ICard getCurrentPlayedCard() {
+    
     return pilaDesc.peekCard();
   }
 
   @Override
   public void discard(ICard newCard) {
-    pilaDesc.pushCard(newCard);
     
+    pilaDesc.pushCard(newCard); 
   }
 
   @Override
   public ArrayList<ICard> addCardsToPlayer(IPlayer player, int number) {
+    
     ArrayList<ICard> mano = drawCards(number);
     player.addToHand(mano);
     return mano;

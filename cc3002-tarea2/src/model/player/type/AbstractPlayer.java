@@ -8,6 +8,11 @@ import model.card.type.Color;
 import model.card.type.ICard;
 import model.card.type.NullCard;
 
+/**
+ * Abstract Class that implements the constructor and methods of the IPlayer interface
+ * 
+ * @author Daniela Campos
+ */
 public abstract class AbstractPlayer implements IPlayer {
   
   protected ArrayList<ICard> mano;
