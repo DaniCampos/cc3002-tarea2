@@ -78,13 +78,31 @@
 
 \begin{figure}[H]
 \center
-\includegraphics[scale=0.5]{HeartStone.png}
+\includegraphics[scale=0.13]{UMLTarea2foto.png}
 \end{figure}
 
 %\begin{figure}
 %\centerings
 %\includegraphics[scale=0.43]{HeartStone.png}
 %\end{figure}
+
+\newpage
+
+\section{Patrones de Diseño}
+
+Los patrones de diseño utilizados en la Tarea 2 fueron:
+
+\begin{enumerate}
+\item Adapter: Se adaptó la clase Stack de Java, utlizando la clase ICardPile.
+
+\item Template: Se implementó la clase DeckStrategy, la cual podría ser utilizada para crear un mazo para cualquier juego de cartas, debido a que dentro de esta se implemetaron los métodos createColorDeck y numericDeck, los cuales permiten crear un mazo de cartas de un color y uno con todas las cartas numéricas respectivamente. Se quería implementar una clase TestDeckStrategy, para poder testear la correcta creación de un mazo de cartas, pero por motivos de tiempo no fue posible.
+
+\item NullObject: Se implementó la clase NullCard, con el objetivo de utilizarlo cuando fuera necesario sacar una carta, para así no tener que verificar que el arreglo que contuviera las cartas apropiadas para ser jugadas fuera nulo o estuviera vacío. A la hora de tratar de incorporar este comportamiento al juego, este fallaba, por lo que se priorizó la funcionalidad del juego por sobre la utilización de este patrón.
+
+\item Factory: Se utilizó este patrón a la hora de crear la lista de jugadores y el mazo. Para el caso del mazo, se utilizó la interfaz IDeckStrategy para crear un mazo(Product) utilizando DeckStrategy(Factory), el cliente correspondía a CardPilesManager.  Para crear la lista de jugadores(Producto), se utilizó la interfaz PlayerListBuilder(Factory) utilizando PlayerListBuilder, la cual era instanciada por PlayerManager(Cliente).
+
+\item State: A la hora de realizar este resumen, se pensó en implementar un state patter para distinguir si es que el jugador había dicho uno o no.
+\end{enumerate}
 
 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  4 SEP 2017 05:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  25 OCT 2017 21:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -155,7 +155,7 @@ Overfull \hbox (68.1209pt too wide) in paragraph at lines 16--17
 
 
 Overfull \hbox (9.51173pt too wide) in paragraph at lines 16--17
- \OT1/cmr/m/n/20.74 1 
+ \OT1/cmr/m/n/20.74 2 
  []
 
 
@@ -220,19 +220,19 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.28 	\normalsize
-                 {https://github.com/DaniCampos/Tarea1-Metodologias}
+                 {https://github.com/DaniCampos/cc3002-tarea2}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (348.6253pt too wide) in paragraph at lines 28--29
- []\OT1/cmr/m/n/20.74 https://github.com/DaniCampos/Tarea1- 
+Overfull \hbox (347.00002pt too wide) in paragraph at lines 28--29
+ []\OT1/cmr/m/n/20.74 https://github.com/DaniCampos/cc3002- 
  []
 
 
-Overfull \hbox (109.90674pt too wide) in paragraph at lines 28--29
- \OT1/cmr/m/n/20.74 Metodologias 
+Overfull \hbox (51.65274pt too wide) in paragraph at lines 28--29
+ \OT1/cmr/m/n/20.74 tarea2 
  []
 
 ! Undefined control sequence.
@@ -296,14 +296,14 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.48 	\normalsize
-                 {3 de Septiembre del 2017} \\
+                 {25 de Octubre del 2017} \\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (9.51173pt too wide) in paragraph at lines 48--48
- []\OT1/cmr/m/n/20.74 3 
+Overfull \hbox (19.02347pt too wide) in paragraph at lines 48--48
+ []\OT1/cmr/m/n/20.74 25 
  []
 
 
@@ -312,18 +312,13 @@ Overfull \hbox (19.02348pt too wide) in paragraph at lines 48--48
  []
 
 
-Overfull \hbox (35.8799pt too wide) in paragraph at lines 48--48
- \OT1/cmr/m/n/20.74 Sep- 
+Overfull \hbox (29.61876pt too wide) in paragraph at lines 48--48
+ \OT1/cmr/m/n/20.74 Oc- 
  []
 
 
-Overfull \hbox (43.22455pt too wide) in paragraph at lines 48--48
- \OT1/cmr/m/n/20.74 tiem- 
- []
-
-
-Overfull \hbox (26.36815pt too wide) in paragraph at lines 48--48
- \OT1/cmr/m/n/20.74 bre 
+Overfull \hbox (44.30809pt too wide) in paragraph at lines 48--48
+ \OT1/cmr/m/n/20.74 tubre 
  []
 
 
