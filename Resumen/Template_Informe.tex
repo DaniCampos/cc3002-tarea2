@@ -1,0 +1,90 @@
+\documentclass[letterpaper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1.8cm,left=2.8cm,paper=letterpaper]{geometry}
+\usepackage{fullpage}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{bigstrut}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{epstopdf}
+\usepackage{sectsty}
+\usepackage{lipsum}
+\usepackage{booktabs}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{makeidx}
+\usepackage[bookmarks = true, colorlinks=true, linkcolor = black, citecolor = black, menucolor = black, urlcolor = black]{hyperref} 
+\usepackage[none]{hyphenat}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage[font={small}]{caption}
+\usepackage{blindtext}
+\usepackage[export]{adjustbox}
+\usepackage{listings}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\figurename}{Figura}
+\renewcommand{\contentsname}
+{Índice}
+
+
+
+\sectionfont{\centering}
+
+\fancyhf{}
+\fancyhead[R]{\textit{ \nouppercase{\rightmark}} }
+\fancyfoot[L]{Escuela de Ingeniería y Ciencias}
+\fancyfoot[R]{Universidad de Chile}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand*{\sectionmark}[1]{\markboth{\MakeUppercase{#1}}{}}
+
+\begin{document}
+\lstset{language=Java} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%Inclusión portada%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\oddsidemargin 0cm \topmargin -2cm \textheight 21cm \textwidth
+	16.5cm \headheight 1cm \linespread {1.0} \headsep 1cm \parindent 0mm
+
+	\input{Portada}
+
+	%\topmargin 0cm
+	%\pagestyle{empty}
+	%\pagestyle{fancy}
+	%\pagenumbering{arabic}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%Comienzo informe%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%\newpage
+
+%\begin{center}
+%\tableofcontents
+%5\end{center}
+
+%\setlength{\parskip}{3mm}
+
+
+
+%\section{Diagrama UML}
+
+\center
+\textbf{Diagrama UML}
+
+\begin{figure}[H]
+\center
+\includegraphics[scale=0.5]{HeartStone.png}
+\end{figure}
+
+%\begin{figure}
+%\centerings
+%\includegraphics[scale=0.43]{HeartStone.png}
+%\end{figure}
+
+
+\end{document}
