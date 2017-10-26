@@ -35,11 +35,39 @@ public class CardPileTest {
 
     assertNotNull(pilaCartas);
     assertEquals(pilaCartas.getSize(), 0);
+    assertEquals(pilaCartas.isEmpty(), true);
   }
 
-  /*@Test
+  @Test
   public void test() {
-    fail("Not yet implemented");
-  }*/
+    
+    pilaCartas.pushCard(carta1);
+    assertEquals(pilaCartas.getSize(), 1);
+    
+    ICard peekCata = pilaCartas.peekCard();
+    assertEquals(peekCata, carta1);
+    
+    pilaCartas.popCard();
+    assertEquals(pilaCartas.isEmpty(), true);
+
+    ICardPile pila1 = new CardPile();
+    pila1.pushCard(carta1);
+    pila1.pushCard(carta2);
+    pila1.pushCard(carta3);
+    
+    ICardPile pila2 = new CardPile();
+    pila2.pushCard(carta2);
+    pila2.pushCard(carta3);
+    
+    pilaCartas.pushCard(carta1);
+    
+    pilaCartas.pushCards(pila2);
+    
+    pilaCartas.shuffle();
+    
+    //assertEquals(pilaCartas, pila2);
+    
+    
+  }
 
 }
